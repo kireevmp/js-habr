@@ -1,0 +1,21 @@
+{
+  "name": "js-habr",
+  "version": "0.0.1",
+  "description": "JavaScript habr.com API wrapper",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/kireevmp/js-habr.git"
+  },
+  "keywords": [
+    "habr",
+    "api",
+    "habrahabr"
+  ],
+  "author": "Kireev Mikhail",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/kireevmp/js-habr/issues"
+  },
+  "homepage": "https://github.com/kireevmp/js-habr#readme"
+}
