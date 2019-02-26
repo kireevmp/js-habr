@@ -1,11 +1,11 @@
 import BaseApi from './BaseApi';
 
 export default class CommentsApi extends BaseApi {
-    getComments(post) {
+    get(post) {
         return this.api(`/comments/${post}`, 'get');
     }
 
-    postComment(post, text, parent) {
+    post(post, text, parent) {
         return this.api(`/comments/${post}`, 'put', {
             text,
             parent_id: parent

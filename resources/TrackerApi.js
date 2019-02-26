@@ -9,11 +9,11 @@ export default class TrackerApi extends BaseApi {
         return this.api('/tracker/counters', 'get');
     }
 
-    getPostsFeed(page = 1) {
+    getPosts(page = 1) {
         return this.api('/tracker/posts', 'get', { page });
     }
 
-    getSubscribersFeed(page = 1) {
+    getSubscribers(page = 1) {
         return this.api('/tracker/subscribers', 'get', { page });
     }
 
@@ -21,7 +21,7 @@ export default class TrackerApi extends BaseApi {
         return this.api('/tracker/mentions', 'get', { page });
     }
 
-    getAppsFeed(page = 1) {
+    getApps(page = 1) {
         return this.api('/tracker/apps', 'get', { page });
     }
 }

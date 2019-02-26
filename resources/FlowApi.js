@@ -5,15 +5,15 @@ export default class FeedApi extends BaseApi {
         return this.api('/flows', 'get');
     }
 
-    getFeedInteresting(alias, page = 1) {
+    getInteresting(alias, page = 1) {
         return this.api(`/flows/${alias}/interesting`, 'get', { page });
     }
 
-    getFeedAll(alias, page = 1) {
+    getAll(alias, page = 1) {
         return this.api(`/flows/${alias}/all`, 'get', { page });
     }
 
-    getFeedBest(alias, page = 1) {
+    getBest(alias, page = 1) {
         return this.api(`/flows/${alias}/best`, 'get', { page });
     }
 

@@ -1,5 +1,13 @@
 import RequestSender from './RequestSender';
-import UsersApi from './Users';
+import UsersApi from './UsersApi';
+import TrackerApi from './TrackerApi';
+import SettingsApi from './SettingsApi';
+import SearchApi from './SearchApi';
+import FlowApi from './FlowApi';
+import PostApi from './PostApi';
+import FeedApi from './FeedApi';
+import CompanyApi from './CompanyApi';
+import CommentsApi from './CommentsApi';
 
 export default class HabrApi {
     constructor(options) {
@@ -27,6 +35,14 @@ export default class HabrApi {
         this.requests = new RequestSender(fetch);
 
         this.users = new UsersApi(this.apicall.bind(this));
+        this.posts = new PostApi(this.apicall.bind(this));
+        this.flows = new FlowApi(this.apicall.bind(this));
+        this.feed = new FeedApi(this.apicall.bind(this));
+        this.companies = new CompanyApi(this.apicall.bind(this));
+        this.comments = new CommentsApi(this.apicall.bind(this));
+        this.search = new SearchApi(this.apicall.bind(this));
+        this.settings = new SettingsApi(this.apicall.bind(this));
+        this.tracker = new TrackerApi(this.apicall.bind(this));
     }
 
     async auth({ password, email }) {

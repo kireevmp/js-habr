@@ -1,7 +1,7 @@
 import BaseApi from './BaseApi';
 
 export default class PostApi extends BaseApi {
-    getPost(post) {
+    get(post) {
         return this.api(`/post/${post}`, 'get');
     }
 
