@@ -8,6 +8,8 @@ import PostApi from './PostApi';
 import FeedApi from './FeedApi';
 import CompanyApi from './CompanyApi';
 import CommentsApi from './CommentsApi';
+import HubsApi from './HubsApi';
+import PollsApi from './PollsApi';
 
 export default class HabrApi {
     constructor(options) {
@@ -43,6 +45,8 @@ export default class HabrApi {
         this.search = new SearchApi(this.apicall.bind(this));
         this.settings = new SettingsApi(this.apicall.bind(this));
         this.tracker = new TrackerApi(this.apicall.bind(this));
+        this.hubs = new HubsApi(this.apicall.bind(this));
+        this.polls = new PollsApi(this.apicall.bind(this));
     }
 
     async auth({ password, email }) {
